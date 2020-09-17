@@ -22,8 +22,7 @@ public class GameResouce {
 	@GetMapping 
 	public ResponseEntity<List<GameDTO>> findAll() {
 		List<GameDTO> list = service.findAll();
-		return ResponseEntity.ok().body(list)  ; 
-		
+		return ResponseEntity.ok().body(list)  ; 	
 	}
 	
 }
