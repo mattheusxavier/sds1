@@ -29,7 +29,7 @@ public class Game implements Serializable {
 	private long id;
 	private String title;
 	private Platform platform;
-	
+	 
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
