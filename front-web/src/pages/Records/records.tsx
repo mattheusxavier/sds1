@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom';
 
 import { RecordsResponse } from './types';
-import {formatDate} from './helpers';
-import Pagination from './Pagination/index';
+import { formatDate } from './helpers';
 
+import Pagination from './Pagination/index';
+import Filters from '../../components/Filters/index';
 import axios from 'axios';
 
 import './styles.css';
@@ -26,12 +26,7 @@ const Records = () => {
 
     return (
         <div className="page-container">
-            <div className="filters-container records-actions">
-                <Link to="/charts"/>
-                <button className="action-filters">
-                    VER GRÁFICOS
-                </button>
-            </div>
+            <Filters link="/charts" linkText="VER GRÁFICOS"/>
             <table className="records-table" cellPadding="0" cellSpacing="0">
                 <thead>
                     <tr>
@@ -56,7 +51,7 @@ const Records = () => {
                     ))}
                 </tbody>
             </table>
-            <Pagination 
+            <Pagination
                 activePage={activePage}
                 goToPage={hanblePageChange}
                 totalPages={recordsResponse?.totalPages}
