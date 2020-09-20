@@ -21,7 +21,7 @@ const Header = () => {
     </TouchableNativeFeedback>
   )
 }
-
+  
 const styles = StyleSheet.create({
   header: {
     paddingTop: 50,
